@@ -30,4 +30,4 @@ This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://
 - The slider shall be under the buttons
 - The slider shall update in realtime
 - The squares shall have rounded corners
-- Animated github buttonz
+- Animated github button
