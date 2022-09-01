@@ -1,7 +1,6 @@
 /*Correct the gradient for Safari  
 because Safari renders gradients different for some reasons*/
 (function () {
-  console.log('does this execute?');
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (isSafari) {
     console.log('do I get here?');

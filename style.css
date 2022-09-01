@@ -6,7 +6,7 @@
 html {
 }
 body {
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,13 +34,12 @@ body {
     rgba(255, 205, 222, 1) 9%,
     rgba(142, 215, 242, 1) 91%
   ); */
-  background: rgb(255, 197, 217);
-  background: linear-gradient(
+  background: rgba(126, 220, 255, 1);
+  background-image: linear-gradient(
     0deg,
     rgba(255, 197, 217, 1) 9%,
     rgba(126, 220, 255, 1) 91%
   );
-  background-size: 200%;
   /* background-color: rgba(161, 0, 161, 1); */
   /* background-color: rgba(126, 220, 255, 1); */
 }
