@@ -4,6 +4,7 @@
 }
 
 body {
+  overscroll-behavior: none;
   width: 100%;
   display: block;
   justify-content: center;
