@@ -3,51 +3,23 @@
   src: url(https://fonts.cdnfonts.com/s/29304/SFAlienEncounters.woff);
 }
 
-html {
-}
 body {
   width: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  /*   background: rgb(60, 7, 163);
-  background: linear-gradient(
-    0deg,
-    rgba(60, 7, 163, 1) 9%,
-    rgba(161, 0, 161, 1) 80%
-  ); */
-  /*   background: rgb(248, 170, 196);
-  background: linear-gradient(
-    0deg,
-    rgba(248, 170, 196, 1) 0%,
-    rgba(118, 215, 251, 1) 100%
-  ); */
-  /*   background: rgb(247, 186, 207);
-  background: linear-gradient(
-    0deg,
-    rgba(247, 186, 207, 1) 6%,
-    rgba(118, 215, 251, 1) 100%
-  ); */
-  /*   background: rgb(255, 205, 222);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 205, 222, 1) 9%,
-    rgba(142, 215, 242, 1) 91%
-  ); */
+
   background: rgba(126, 220, 255, 1);
   background-image: linear-gradient(
     0deg,
     rgba(255, 197, 217, 1) 9%,
     rgba(126, 220, 255, 1) 91%
   );
-  /* background-color: rgba(161, 0, 161, 1); */
-  /* background-color: rgba(126, 220, 255, 1); */
 }
 
 h1 {
   font-family: 'SF Alien Encounters', sans-serif;
   font-size: 50px;
-
   color: #7dffd4;
 }
 
@@ -58,11 +30,10 @@ h1 {
   flex-direction: column;
 }
 
-.buttons {
+.button-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 700px;
   height: 60px;
   background-color: #c0c0c0;
 }
@@ -71,7 +42,7 @@ h1 {
 }
 
 .grid {
-  display: grid;
+  display: inline-grid;
   height: 600px;
   width: 600px;
   background-color: #c0c0c0;
