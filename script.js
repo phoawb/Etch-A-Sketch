@@ -1,3 +1,15 @@
+/*Correct the gradient for Safari  
+because Safari renders gradients different for some reasons*/
+(function () {
+  console.log('does this execute?');
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari) {
+    console.log('do I get here?');
+    document.body.style.backgroundImage =
+      'linear-gradient( 0deg, rgba(255, 197, 217, 1) 40%, rgba(126, 220, 255, 1) 91%)';
+  }
+})();
+
 const grid = document.querySelector('.grid');
 const slider = document.getElementById('slider');
 let sliderValue = document.getElementById('sliderValue');
