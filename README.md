@@ -1,4 +1,4 @@
-# Etch-A-Sketch in the browser
+# Vaporwave themed Etch-A-Sketch in the browser
 
 This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
@@ -11,7 +11,7 @@ This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://
 - [ ] Button logic
 - [ ] Size slider
 - [ ] Paint logic
-- [ ] Mouse hover color
+- [x] Mouse hover color
 - [ ] Animated container border
 - [ ] Title CSS
 
