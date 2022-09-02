@@ -39,9 +39,6 @@ h1 {
   background-color: #c0c0c0;
 }
 
-.color-picker {
-}
-
 .grid {
   display: inline-grid;
   height: 600px;
@@ -56,8 +53,13 @@ h1 {
   background-color: #c0c0c0;
 }
 
+.cell:hover {
+  background-color: #7dffd4;
+}
+
 .button {
   background-color: #c0c0c0;
+  font-size: medium;
   border-top: 2px solid white;
   border-left: 2px solid white;
   width: 100px;
@@ -70,6 +72,9 @@ h1 {
   border-right: 2px solid white;
   border-top: 2px solid #808080;
   border-left: 2px solid #808080;
+  color: #424242;
+  box-shadow: 3px -4px 0px -3px #000000, -3px -4px 0px -3px #000000,
+    -4px -4px 0px -3px #000000, -4px 3px 0px -3px #000000;
 }
 
 footer {
