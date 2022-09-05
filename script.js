@@ -65,6 +65,7 @@ const activateButtons = () => {
       b.classList = 'active-button';
     })
   );
+  document.getElementById('whiteButton').classList = 'active-button';
 };
 
 window.onload = () => {
