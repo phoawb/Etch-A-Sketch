@@ -61,11 +61,10 @@ const activateButtons = () => {
     b.addEventListener('click', () => {
       if (b.classList === 'active-button') return;
       BUTTONS.forEach((b) => (b.classList = 'button'));
-      console.log('DO I TOGGLE THE BUTTON?');
-      b.classList = 'active-button';
+      b.classList.add('active');
     })
   );
-  document.getElementById('whiteButton').classList = 'active-button';
+  document.getElementById('whiteButton').classList.add('active');
 };
 
 window.onload = () => {
