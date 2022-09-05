@@ -49,13 +49,6 @@ SLIDER.addEventListener('input', (e) => {
   adjustGrid(gridSize * gridSize - oldGridSize * oldGridSize);
 });
 
-const toggleButton = (button) => {
-  if (button.classList === 'active-button') return;
-  BUTTONS.forEach((b) => b.classList === 'button');
-  console.log('DO I TOGGLE THE BUTTON?');
-  button.classList = 'active-button';
-};
-
 const activateButtons = () => {
   BUTTONS.forEach((b) =>
     b.addEventListener('click', () => {
