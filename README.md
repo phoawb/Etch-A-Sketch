@@ -5,15 +5,15 @@ This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://
 ## Roadmap
 
 - [x] CSS gradient background
-- [ ] Sketch container div
-- [ ] Sketch squares
-- [ ] Buttons
+- [x] Sketch container div
+- [x] Sketch squares
+- [x] Buttons
 - [ ] Button logic
 - [ ] Size slider
 - [ ] Paint logic
 - [x] Mouse hover color
 - [ ] Animated container border
-- [ ] Title CSS
+- [x] Title CSS
 
 ## Design specifications
 
