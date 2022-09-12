@@ -3,6 +3,10 @@
   src: url(https://fonts.cdnfonts.com/s/29304/SFAlienEncounters.woff);
 }
 
+:root {
+  --max-width: 600px;
+}
+
 body {
   overscroll-behavior: none;
   display: flex;
@@ -41,10 +45,17 @@ h1 {
   background-color: #c0c0c0;
 }
 
+/* .gridContainer {
+  height: 75vw;
+  width: 75vw;
+} */
+
 .grid {
   display: inline-grid;
-  height: 600px;
-  width: 600px;
+  height: 75vw;
+  width: 75vw;
+  max-width: var(--max-width);
+  max-height: var(--max-width);
   background-color: #c0c0c0;
   grid-template-columns: repeat(16, 2fr);
   grid-template-rows: repeat(16, 2fr);
