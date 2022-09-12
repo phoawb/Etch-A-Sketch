@@ -12,6 +12,7 @@ because Safari renders gradients different for some reasons*/
 const GRID = document.querySelector('.grid');
 const SLIDER = document.getElementById('slider');
 const BUTTONS = [...document.getElementsByClassName('button')];
+let sketchColor = 'black';
 let sliderValue = document.getElementById('sliderValue');
 let gridSize = 16;
 
@@ -52,7 +53,8 @@ SLIDER.addEventListener('input', (e) => {
 const activateButtons = () => {
   BUTTONS.forEach((b) =>
     b.addEventListener('click', () => {
-      if (b.classList === 'active-button') return;
+      console.log(b.classList.value === 'button active');
+      if (b.classList.value === 'button active') return;
       BUTTONS.forEach((b) => (b.classList = 'button'));
       b.classList.add('active');
     })
