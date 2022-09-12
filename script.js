@@ -12,7 +12,7 @@ because Safari renders gradients different for some reason*/
 const GRID = document.querySelector('.grid');
 const SLIDER = document.getElementById('slider');
 const BUTTONS = [...document.getElementsByClassName('button')];
-let sketchColor = 'black';
+let sketchColor = '#ff00c1';
 let pencilToggle = true;
 let sliderValue = document.getElementById('sliderValue');
 let gridSize = 16;
@@ -65,8 +65,8 @@ const activateButtons = () => {
       b.classList.add('active');
     });
     switch (b.id) {
-      case 'blackButton': {
-        b.addEventListener('click', () => (sketchColor = 'black'));
+      case 'pinkButton': {
+        b.addEventListener('click', () => (sketchColor = '#ff00c1'));
         break;
       }
       case 'vaporButton': {
@@ -83,7 +83,7 @@ const activateButtons = () => {
       }
     }
   });
-  document.getElementById('blackButton').classList.add('active');
+  document.getElementById('pinkButton').classList.add('active');
 };
 
 window.onload = () => {
