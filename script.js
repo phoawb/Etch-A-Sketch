@@ -74,7 +74,10 @@ const activateButtons = () => {
         break;
       }
       case 'colorButton': {
-        b.addEventListener('click', () => (sketchColor = 'color'));
+        b.addEventListener('click', () => {
+          let colorPickerColor = document.getElementById('colorInput').value;
+          sketchColor = colorPickerColor;
+        });
         break;
       }
       case 'eraserButton': {
@@ -86,7 +89,17 @@ const activateButtons = () => {
   document.getElementById('pinkButton').classList.add('active');
 };
 
+const activateColorInput = () => {
+  const colorInput = document.getElementById('colorInput');
+  colorInput.addEventListener('input', (e) => {
+    const colorButton = document.getElementById('colorButton');
+    if (colorButton.classList.value === 'button active')
+      sketchColor = e.target.value;
+  });
+};
+
 window.onload = () => {
   createCells(gridSize * gridSize);
   activateButtons();
+  activateColorInput();
 };
