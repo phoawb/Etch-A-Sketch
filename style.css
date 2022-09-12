@@ -117,7 +117,7 @@ button.active {
 }
 
 .cell:hover {
-  background-color: #7dffd4;
+  background-color: #7dffd4 !important;
 }
 
 footer {
