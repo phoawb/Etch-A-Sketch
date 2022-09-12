@@ -16,7 +16,7 @@ let sketchColor = 'black';
 let sliderValue = document.getElementById('sliderValue');
 let gridSize = 16;
 
-const createGrid = (gridSquared) => {
+const createCells = (gridSquared) => {
   for (let i = 0; i < gridSquared; i++) {
     const cell = document.createElement('div');
     cell.classList = 'cell';
@@ -24,7 +24,7 @@ const createGrid = (gridSquared) => {
   }
 };
 
-const deleteGrid = (gridSquared) => {
+const deleteCells = (gridSquared) => {
   for (let i = 0; i < gridSquared; i++) {
     GRID.removeChild(GRID.firstChild);
   }
@@ -32,10 +32,10 @@ const deleteGrid = (gridSquared) => {
 
 const adjustGrid = (gridSizeDiff) => {
   if (gridSizeDiff < 0) {
-    deleteGrid(gridSizeDiff * -1);
+    deleteCells(gridSizeDiff * -1);
     return;
   }
-  createGrid(gridSizeDiff);
+  createCells(gridSizeDiff);
 };
 
 //Update the slider value label in real time
@@ -51,21 +51,35 @@ SLIDER.addEventListener('input', (e) => {
 });
 
 const activateButtons = () => {
-  BUTTONS.forEach((b) =>
+  BUTTONS.forEach((b) => {
     b.addEventListener('click', () => {
-      console.log(b.classList.value === 'button active');
       if (b.classList.value === 'button active') return;
       BUTTONS.forEach((b) => (b.classList = 'button'));
       b.classList.add('active');
-    })
-  );
+    });
+    switch (b.id) {
+      case 'blackButton': {
+        b.addEventListener('click', () => (sketchColor = 'black'));
+        break;
+      }
+      case 'vaporButton': {
+        b.addEventListener('click', () => (sketchColor = 'vapor'));
+        break;
+      }
+      case 'colorButton': {
+        b.addEventListener('click', () => (sketchColor = 'color'));
+        break;
+      }
+      case 'eraserButton': {
+        b.addEventListener('click', () => (sketchColor = '#c0c0c0'));
+        break;
+      }
+    }
+  });
   document.getElementById('blackButton').classList.add('active');
 };
 
 window.onload = () => {
-  createGrid(gridSize * gridSize);
+  createCells(gridSize * gridSize);
   activateButtons();
-  console.log('available height is: ', screen.availHeight);
-  console.log('available width is: ', screen.availWidth);
-  console.log('full height is: ', screen.height);
 };
