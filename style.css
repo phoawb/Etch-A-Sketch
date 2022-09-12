@@ -100,6 +100,9 @@ button.active {
   width: 75vw;
 } */
 
+/* TODO: 
+* Remove border at certain screen size
+*/
 .grid {
   display: inline-grid;
   height: 75vw;
