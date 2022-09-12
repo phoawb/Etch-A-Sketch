@@ -63,4 +63,7 @@ const activateButtons = () => {
 window.onload = () => {
   createGrid(gridSize * gridSize);
   activateButtons();
+  console.log('available height is: ', screen.availHeight);
+  console.log('available width is: ', screen.availWidth);
+  console.log('full height is: ', screen.height);
 };

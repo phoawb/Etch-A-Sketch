@@ -5,11 +5,12 @@
 
 body {
   overscroll-behavior: none;
-  width: 100%;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
+  width: 100%;
+  /* min-height: 100vh; */
   background: rgba(126, 220, 255, 1);
   background-image: linear-gradient(
     0deg,
@@ -29,6 +30,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .button-container {
