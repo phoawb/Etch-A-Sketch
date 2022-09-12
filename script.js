@@ -24,9 +24,10 @@ const createCells = (gridSquared) => {
     cell.addEventListener('mouseover', () => {
       if (pencilToggle) cell.style.backgroundColor = sketchColor;
     });
-    cell.addEventListener('click', () =>
-      pencilToggle ? (pencilToggle = false) : (pencilToggle = true)
-    );
+    cell.addEventListener('click', () => {
+      pencilToggle ? (pencilToggle = false) : (pencilToggle = true);
+      if (pencilToggle) cell.style.backgroundColor = sketchColor;
+    });
     GRID.appendChild(cell);
   }
 };
