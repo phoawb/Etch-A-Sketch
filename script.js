@@ -84,6 +84,12 @@ const activateButtons = () => {
         b.addEventListener('click', () => (sketchColor = '#c0c0c0'));
         break;
       }
+      case 'clearButton': {
+        b.addEventListener('click', () => {
+          const cells = [...GRID.childNodes];
+          cells.forEach((c) => (c.style.backgroundColor = '#c0c0c0'));
+        });
+      }
     }
   });
   document.getElementById('pinkButton').classList.add('active');
