@@ -95,6 +95,12 @@ button.active {
   outline-offset: -6px;
 }
 
+.colorPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .gridContainer {
   height: 75vw;
   width: 75vw;
