@@ -13,6 +13,7 @@ const GRID = document.querySelector('.grid');
 const SLIDER = document.getElementById('slider');
 const BUTTONS = [...document.getElementsByClassName('button')];
 let sketchColor = 'black';
+let pencilToggle = true;
 let sliderValue = document.getElementById('sliderValue');
 let gridSize = 16;
 
@@ -20,6 +21,12 @@ const createCells = (gridSquared) => {
   for (let i = 0; i < gridSquared; i++) {
     const cell = document.createElement('div');
     cell.classList = 'cell';
+    cell.addEventListener('mouseover', () => {
+      if (pencilToggle) cell.style.backgroundColor = sketchColor;
+    });
+    cell.addEventListener('click', () =>
+      pencilToggle ? (pencilToggle = false) : (pencilToggle = true)
+    );
     GRID.appendChild(cell);
   }
 };
