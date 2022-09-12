@@ -45,6 +45,11 @@ const adjustGrid = (gridSizeDiff) => {
   createCells(gridSizeDiff);
 };
 
+const clearCells = () => {
+  const cells = [...GRID.childNodes];
+  cells.forEach((c) => (c.style.backgroundColor = '#c0c0c0'));
+};
+
 //Update the slider value label in real time
 SLIDER.addEventListener('input', (e) => {
   const oldGridSize = gridSize;
@@ -87,10 +92,7 @@ const activateButtons = () => {
         break;
       }
       case 'clearButton': {
-        b.addEventListener('click', () => {
-          const cells = [...GRID.childNodes];
-          cells.forEach((c) => (c.style.backgroundColor = '#c0c0c0'));
-        });
+        b.addEventListener('click', clearCells);
       }
     }
   });
