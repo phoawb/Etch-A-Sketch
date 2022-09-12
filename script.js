@@ -59,11 +59,13 @@ SLIDER.addEventListener('input', (e) => {
 
 const activateButtons = () => {
   BUTTONS.forEach((b) => {
-    b.addEventListener('click', () => {
-      if (b.classList.value === 'button active') return;
-      BUTTONS.forEach((b) => (b.classList = 'button'));
-      b.classList.add('active');
-    });
+    if (b.id !== 'clearButton') {
+      b.addEventListener('click', () => {
+        if (b.classList.value === 'button active') return;
+        BUTTONS.forEach((b) => (b.classList = 'button'));
+        b.classList.add('active');
+      });
+    }
     switch (b.id) {
       case 'pinkButton': {
         b.addEventListener('click', () => (sketchColor = '#ff00c1'));
