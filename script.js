@@ -13,7 +13,7 @@ const GRID = document.querySelector('.grid');
 const SLIDER = document.getElementById('slider');
 const BUTTONS = [...document.getElementsByClassName('button')];
 let sketchColor = '#ff00c1';
-let pencilToggle = true;
+let paintToggle = true;
 let sliderValue = document.getElementById('sliderValue');
 let gridSize = 16;
 
@@ -22,11 +22,16 @@ const createCells = (gridSquared) => {
     const cell = document.createElement('div');
     cell.classList = 'cell';
     cell.addEventListener('mouseover', () => {
-      if (pencilToggle) cell.style.backgroundColor = sketchColor;
+      if (!paintToggle) return;
+      if (sketchColor === 'vaporwave') {
+        cell.style.backgroundColor = getVaporwaveColor();
+        return;
+      }
+      cell.style.backgroundColor = sketchColor;
     });
     cell.addEventListener('click', () => {
-      pencilToggle ? (pencilToggle = false) : (pencilToggle = true);
-      if (pencilToggle) cell.style.backgroundColor = sketchColor;
+      paintToggle ? (paintToggle = false) : (paintToggle = true);
+      if (paintToggle) cell.style.backgroundColor = sketchColor;
     });
     GRID.appendChild(cell);
   }
@@ -63,6 +68,18 @@ SLIDER.addEventListener('input', (e) => {
   adjustGrid(gridSize * gridSize - oldGridSize * oldGridSize);
 });
 
+const getVaporwaveColor = () => {
+  const vaporwaveColors = [
+    '#34e1fb',
+    '#63bcfb',
+    '#8dbafb',
+    '#fb93fc',
+    '#b9a1fb',
+  ];
+  const randIndex = Math.ceil(Math.random() * vaporwaveColors.length);
+  return vaporwaveColors[randIndex];
+};
+
 const activateButtons = () => {
   BUTTONS.forEach((b) => {
     if (b.id !== 'clearButton') {
@@ -78,7 +95,7 @@ const activateButtons = () => {
         break;
       }
       case 'vaporButton': {
-        b.addEventListener('click', () => (sketchColor = 'vapor'));
+        b.addEventListener('click', () => (sketchColor = 'vaporwave'));
         break;
       }
       case 'colorButton': {
