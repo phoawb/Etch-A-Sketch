@@ -9,7 +9,7 @@ This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://
 - [x] Sketch squares
 - [x] Buttons
 - [ ] Button logic
-- [ ] Size slider
+- [x] Size slider
 - [ ] Paint logic
 - [x] Mouse hover color
 - [ ] Animated container border
