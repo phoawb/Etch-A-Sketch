@@ -101,6 +101,18 @@ button.active {
   align-items: center;
 }
 
+#colorLabel {
+  width: 36px;
+  height: 36px;
+  background-color: #9600ff;
+}
+
+#colorInput {
+  visibility: hidden;
+  width: 32px;
+  height: 32px;
+}
+
 /* .gridContainer {
   height: 75vw;
   width: 75vw;

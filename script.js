@@ -109,8 +109,17 @@ const activateColorInput = () => {
   });
 };
 
+const activateColorLabel = () => {
+  const colorInput = document.getElementById('colorInput');
+  colorInput.addEventListener('input', (e) => {
+    const colorLabel = document.getElementById('colorLabel');
+    colorLabel.style.backgroundColor = e.target.value;
+  });
+};
+
 window.onload = () => {
   createCells(gridSize * gridSize);
   activateButtons();
   activateColorInput();
+  activateColorLabel();
 };
