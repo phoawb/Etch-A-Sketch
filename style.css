@@ -113,6 +113,44 @@ button.active {
   height: 32px;
 }
 
+.sliderDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 17vw;
+  min-width: 140px;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 14vw;
+  min-width: 100px;
+  height: 2px;
+  margin: 2px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid #a8a9a9;
+  border-left: 1px solid #a8a9a9;
+  background-color: #808080;
+  flex: none;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 25px;
+  background-color: #bfc7c8;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid #87888f;
+  border-bottom: 1px solid #87888f;
+}
+
+#sliderValue {
+  font-family: 'SF Alien Encounters', sans-serif;
+}
+
 /* .gridContainer {
   height: 75vw;
   width: 75vw;
