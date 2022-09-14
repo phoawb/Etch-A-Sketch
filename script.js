@@ -58,6 +58,7 @@ const clearCells = () => {
 
 //Update the slider value label in real time
 SLIDER.addEventListener('input', (e) => {
+  clearCells();
   const oldGridSize = gridSize;
   gridSize = Number(e.target.value);
   sliderValue.innerText = `${gridSize}`;
