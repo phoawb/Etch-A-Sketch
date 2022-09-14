@@ -1,33 +1,21 @@
-# Vaporwave themed Etch-A-Sketch in the browser
+# Vaporwave themed Etch-a-Sketch in the browser
 
-This is an Etch-A-Sketch in the browser as a part of [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+This is an Etch-a-Sketch in the browser as a part of [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
-## Roadmap
+### [Live Demo](https://phoawb.github.io/Etch-A-Sketch/)
 
-- [x] CSS gradient background
-- [x] Sketch container div
-- [x] Sketch squares
-- [x] Buttons
-- [ ] Button logic
-- [x] Size slider
-- [ ] Paint logic
-- [x] Mouse hover color
-- [ ] Animated container border
-- [x] Title CSS
+## Features
 
-## Design specifications
+This is a list of features that the Etch-a-Sketch has that i implemented as a part of the learning process.
 
-- Buttons above Sketch
-  - Clear button
-  - Eraser
-  - VaporWave mode
-  - Color button (with color picker)
-    - Color shall be set with a "color" button with color input to the side
-- Hovering over buttons shall make the borders change color
-- Selecting (clicking a button shall make it change color)
-- The sketch board shall be centered
-- Clearing the board shall be animated
-- The slider shall be under the buttons
-- The slider shall update in realtime
-- The squares shall have rounded corners
-- Animated github button
+- [x] Gradient background
+- [x] Fast and realtime resizing
+- [x] Dynamic resizing
+- [x] Animations
+- [x] Buttons being "selected" on click
+- [x] Making the gradient (somewhat) consistent on safari
+- [x] Making the mousover cell highlited
+
+## Preview
+
+[![](preview.png)](https://phoawb.github.io/Etch-A-Sketch/)
