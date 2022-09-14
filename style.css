@@ -30,6 +30,12 @@ h1 {
   color: #7dffd4;
 }
 
+@media only screen and (max-width: 250px) {
+  h1 {
+    font-size: 11px;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -168,6 +174,13 @@ button.active {
 .cell {
   border: 1px solid #808080;
   background-color: #c0c0c0;
+}
+
+@media only screen and (max-width: 260px) {
+  .cell {
+    border: none;
+    background-color: #c0c0c0;
+  }
 }
 
 .cell:hover {
